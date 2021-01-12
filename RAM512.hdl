@@ -16,7 +16,7 @@ CHIP RAM512 {
 
     PARTS:
     DMux(in=load, sel=address[8], a=LoadRam1, b=LoadRam2);
-    RAM128(in=in, load=LoadRam1, address=address[0..7], out=outRam1);
-    RAM128(in=in, load=LoadRam2, address=address[0..7], out=outRam2);
+    RAM256(in=in, load=LoadRam1, address=address[0..7], out=outRam1);
+    RAM256(in=in, load=LoadRam2, address=address[0..7], out=outRam2);
     Mux16(a=outRam1, b=outRam2, sel=address[8], out=out);
 }
